@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula : Missions</title>
+    <link href="../static/css/main.css" rel="stylesheet"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_box">
+            <div class="nav-sec1">
+                <a href="/mission">Mission</a>
+                <a href="">Earth & Climate</a>
+            </div>
+            <h1 class="logo"><a href="/">Nebula-Nexus</a></h1>
+            <div class="nav-sec1">
+                <a href="/news">News & Events</a>
+                <a href="">Explore Universe</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-banner">
+        <div class="container">
+            <div class="cont">
+                <h1>Welcome To<br> Nebula-Nexus</h1>
+                <p>Our Mission is , Exploring the secrets of the universe for the benefit of all. NASA investigates the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-cont">
+        <div class="news_sec1">
+            <h1 class="news-head">About</h1>
+            <p>"Welcome to Nebula Nexus – your gateway to the incredible world of space exploration. Our mission is to make space technology and scientific innovation accessible to every citizen of India, empowering youth with the knowledge and inspiration to reach for the stars.
+
+            India has a proud legacy in space science, marked by pioneering achievements that have propelled us to new heights in the global arena. From launching our first satellite, Aryabhata, to ambitious lunar missions, India's space journey has been an inspiring testament to what can be achieved through curiosity, resilience, and innovation.
+                
+            At Nebula Nexus, we believe that the space program belongs to each of us – it’s a shared legacy and an opportunity for all Indians to engage in scientific discovery. Our platform provides real-time data on satellite missions, live tracking of space expeditions, and exclusive insights into cutting-edge research. We bring you the latest news, videos, and interactive simulations to help you experience the thrill of space exploration firsthand.
+                
+            Our goal is also to encourage the next generation of space enthusiasts. Through educational resources, online courses, and interactive challenges, we aim to spark curiosity and provide guidance for those dreaming of careers in space science, engineering, and technology.
+                
+            Join us in exploring the wonders of our universe, supporting India's ambitious space missions, and inspiring a future where young minds continue to push the boundaries of what’s possible."</p>
+        </div>
+        <div class="news_sec2">
+            <img src="../static/img/solar-system-illustration-16x9-1.jpg" alt="" width="700" height="500">
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula : News & Events</title>
+    <link href="../static/css/main.css" rel="stylesheet"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_box">
+            <div class="nav-sec1">
+                <a href="/mission">Mission</a>
+                <a href="">Earth & Climate</a>
+            </div>
+            <h1 class="logo"><a href="/">Nebula-Nexus</a></h1>
+            <div class="nav-sec1">
+                <a href="/news">News & Events</a>
+                <a href="">Explore Universe</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-banner">
+        <div class="container">
+            <div class="cont">
+                <h1>Welcome To<br> Nebula-Nexus News</h1>
+                <p>Our Mission is , Exploring the secrets of the universe for the benefit of all. NASA investigates the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="news_sec">
+        <div>
+            <h1>Latest News</h1>
+        </div>
+        <div class="news_card_container">
+            <div class="news-card">
+                <div class="card-image">
+                    <img src="../static/img/nhq202410250003.webp" alt="" width="400">
+                </div>
+                <div class="category"> Illustration </div>
+                <div class="heading">NASA’s SpaceX Crew-8 mission successfully splashed down at 3:29 a.m. EDT Friday, off Pensacola, Florida, concluding a nearly eight-month science mission and the agency’s eighth commercial crew rotation mission to the International Space Station.  
+                    <div class="author">2 days ago</div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="card-image">
+                    <img src="../static/img/AA1sXO3W.jfif" alt="" width="400">
+                </div>
+                <div class="category"> Illustration </div>
+                <div class="heading">Everyone is looking at Elon Musk’: ISRO chief S Somanath ‘inspired’ by work of SpaceX CEO, says ‘trying to beat him…'
+                    <div class="author">1 days ago</div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="card-image">
+                    <img src="../static/img/AA1sYwdh.jfif" alt="" width="400">
+                </div>
+                <div class="category"> Illustration </div>
+                <div class="heading">ISRO to launch electric propelled satellite in Dec: Somanath.
+                 Somanath said the integration of the radar antenna reflector with the satellite will take about two months.
+                "We will schedule it for launch in February," the ISRO chairman said. PTI SKU ZMN
+                    <div class="author">1 days ago</div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="card-image">
+                    <img src="../static/img/chile-signs-accords.webp" alt="" width="400">
+                </div>
+                <div class="category"> Illustration </div>
+                <div class="heading"> Chile signed the Artemis Accords Friday during a ceremony hosted by NASA Administrator Bill Nelson at the agency’s headquarters in Washington, becoming the 47th nation and the seventh South American country to commit to the responsible exploration of space for all humanity.
+                    <div class="author">1 days ago</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+</body>
+</html>

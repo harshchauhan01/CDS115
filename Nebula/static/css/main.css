@@ -1,0 +1,563 @@
+@font-face {
+    font-family: Ceric;
+    src: url("../font/AstroSpace-eZ2Bg.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-weight: 300;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    color: #fff !important;
+    font-family: "Public Sans Web",sans-serif !important;
+    letter-spacing: 2px;
+}
+
+.navbar{
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition:  0.32s ease-in-out;
+}
+
+.navbar.scrolled{
+    padding: 15px 0;
+    background-color: #121212;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Ceric";
+
+}
+
+
+.navbar .navbar_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.navbar_box .nav-sec1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    
+}
+
+
+h1,h2{
+    font-family: "Ceric";
+}
+.navbar_box h1{
+    font-family: "Ceric";
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.banner{
+    margin-top: 0;
+    padding: 0px 0 0px 0;
+    background-image: url("/static/img/mars-offloading-illustration.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.banner .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 250px 50px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.banner .cont{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.banner .cont h1{
+    font-size:55px;
+}
+.banner .cont p{
+    font-size: 16px;
+}
+.banner button{
+    margin-top: 20px;
+}
+
+.Explore-Button {
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(120deg, rgb(65, 43, 95), rgb(96, 51, 154));
+  }
+.IconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+  }
+.telescope {
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: all 1s;
+    transform: rotate(20deg);
+  }
+.tripod {
+    width: 60%;
+    height: auto;
+  }
+.text {
+    color: rgb(240, 240, 240);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+.Explore-Button:hover .telescope {
+    transform: rotate(-35deg);
+  }
+  
+
+.news{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px 120px;
+}
+
+.news h2{
+    font-size: 40px;
+}
+
+.news .news_image{
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+.news_image img{
+    object-fit: cover;
+    
+}
+.news_image div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.news_image .img1 p{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    top: -120px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.news_image .img2{
+    height: 450px;
+}
+
+.news_image .img2 p{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    top: -120px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.img-sec{
+    position: relative;
+    top: -97px;
+}
+
+.news_image .img3 p{
+    position: relative;
+    width: 500px;
+    padding: 0px 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    top: -140px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.earth{
+    width: 100%;
+    height: 650px;
+    background-color: #000;
+    /* background-image: url("../img/banner-bg.png"); */
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.earth .content{
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.earth .content h1{
+    font-size: 42px;
+}
+
+.mission{
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/gateway-with-earth-in-background.webp");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.mission .miss-content{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 100%; 
+    height: 100%;
+    justify-content: center;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.mission .miss-content h1{
+    width: 50%;
+    font-size: 60px;
+}
+.mission .miss-content p{
+    padding-top: 20px;
+    width: 40%;
+    font-size: 16px;
+    
+}
+
+.events_images{
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+    color: #000;
+    padding: 50px;
+}
+
+.event-img{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+}
+
+.sec-img img{
+    object-fit: contain;
+}
+
+.sec-img{
+    display: flex;
+    width: 560px;
+    justify-content: space-evenly;
+}
+.sec-img .sec-sec{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.foot{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    
+}
+.foot .copywrite{
+    width: 80%;
+    border-top: 2px solid #cdcdcd;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-left: 160px;
+    padding-top: 20px;
+    
+    
+}
+
+.footer {
+    background-color: #000;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+  .footer .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer .logo-section {
+    max-width: 300px;
+  }
+
+  .footer .logo-section img {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .footer .logo-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .footer .logo-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    width: 250px;
+  }
+
+  .footer .column h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .footer .column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer .column ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer .column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .footer .column ul li a:hover {
+    color: #fff;
+  }
+
+
+
+.navbar_box .logo {
+    width: 80%;
+    max-width: 400px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(33, 1, 78, 0.3); 
+}
+    
+.navbar_box .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+
+.news-banner{
+    margin-top: 0;
+    padding: 0px 0 0px 0;
+    background-image: url("/static/img/54091201742-8775a1e630-o-59883156791c7.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.news-banner .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 250px 50px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.news-banner .cont{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.news-banner .cont h1{
+    font-size:55px;
+}
+.news-banner .cont p{
+    font-size: 16px;
+}
+.news-banner button{
+    margin-top: 20px;
+}
+
+.news-cont{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 50px 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+}
+
+.news-cont .news_sec1{
+    width: 70%;
+    font-size: 14px;
+}
+.news-cont .news_sec1 p{
+    width: 80%;
+}
+
+.news-cont h1{
+    font-size: 42px;
+    padding-bottom: 30px;
+}
+
+.news_sec{
+    background-color: white;
+    color: #000;
+}
+
+.news_card_container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 70px 20px;
+    overflow-x: scroll;
+}
+
+.news-card {
+    width: 350px;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    padding: .4em;
+    border-radius: 6px;
+    overflow-y: scroll;
+}
+  
+.news-card .card-image {
+    background-color: rgb(202, 202, 202);
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+    overflow: hidden;
+}
+  
+.news-card .card-image:hover {
+    transform: scale(0.98);
+}
+  
+.news-card .category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+}
+  
+.news-card .category:hover {
+    cursor: pointer;
+}
+  
+.news-card .heading {
+    font-weight: 300;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+    font-size: 14px;
+}
+  
+.news-card .heading:hover {
+    cursor: pointer;
+}
+  
+.news-card .author {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+}
+  
+.news-card  .name {
+    font-weight: 600;
+  }
+  
+.news-card  .name:hover {
+    cursor: pointer;
+  }
