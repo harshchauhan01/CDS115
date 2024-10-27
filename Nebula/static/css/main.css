@@ -86,6 +86,7 @@ h1,h2{
 
 }
 
+
 .banner .container{
     width: 100%;
     height: 100%;
@@ -561,3 +562,186 @@ h1,h2{
 .news-card  .name:hover {
     cursor: pointer;
   }
+
+
+.counter-container{
+    width: 100%;
+    height: 350px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter-container {
+    display: flex;
+    gap: 30px;
+}
+
+.counter {
+    text-align: center;
+}
+
+.count {
+    font-size: 9em;
+    font-weight: bold;
+}
+
+.spaceship{
+    background-color: #80838a;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.spaceship .text{
+    width: 550px;
+    padding-left: 90px;
+}
+
+
+.rocket_info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    background-color: #000;
+}
+
+.rocket_info .roc_sec1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.rocket_info .roc_content{
+    width: 500px;
+}
+
+.rocket_info .roc_content p{
+    font-weight: 100;
+    color: #9b9b9b;
+    font-size: 16px;
+}
+
+
+.button1 {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.button1__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.button1:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.button1:hover .button1__icon-wrapper {
+    color: #fff;
+    background-color: #000;
+}
+
+.button1__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+}
+
+.button1:hover .button1__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+}
+
+.button1:hover .button1__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+}
+
+
+.earth_home .champa {
+    width: 100%;
+    height: 650px;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+.earth_home .remote {
+    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+.earth_home .setupbox {
+    padding-left: 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.earth_home .champa .sketchfab-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.earth_home .chameli {
+    background-color: #17171b;
+    height: 190px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.earth_home .chameli h1 {
+    font-weight: 200;
+}
+
+.earth_sec1{
+    width: 100%;
+    height: 500px;
+    padding: 60px 100px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 60px;
+}
+
+.earth_sec1 p{
+    width: 500px;
+}
+

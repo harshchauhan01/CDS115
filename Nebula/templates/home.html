@@ -11,12 +11,12 @@
         <div class="navbar_box">
             <div class="nav-sec1">
                 <a href="/mission">Mission</a>
-                <a href="">Earth & Climate</a>
+                <a href="/earth">Earth & Climate</a>
             </div>
             <h1 class="logo"><a href="/">Nebula-Nexus</a></h1>
             <div class="nav-sec1">
                 <a href="/news">News & Events</a>
-                <a href="">Explore Universe</a>
+                <a href="/explore">Explore Universe</a>
             </div>
         </div>
     </nav>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="cont">
                 <h1>Welcome To<br> Nebula-Nexus</h1>
-                <p>Our leadership on the future of space exploration, scientific discovery, and cutting-edge technology brings value to all the people day in and day out</p>
+                <p>Nebula leadership on the future of space exploration, scientific discovery, and cutting-edge technology brings value to all the people day in and day out</p>
                 <button class="Explore-Button">
                     <span class="IconContainer">
                         <svg
@@ -144,17 +144,48 @@
                         </defs>
                         </svg>
                     </span>
-                    <span class="text">Explore The Universe With Us</span>
+                    <a href="/explore" class="text" style="text-decoration: none;">Explore The Universe With Us</a>
                 </button>
             </div>
         </div>
     </div>
+
+    <div class="counter-container">
+        <div class="counter">
+            <span class="count" data-target="397">0</span>
+            <p>Total Launches</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="359">0</span>
+            <p>Total Landings</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="331">0</span>
+            <p>Total Reflights</p>
+        </div>
+    </div>
+    
 
     <div class="mission">
         <div class="miss-content">
             <h1>Missions</h1>
             <p>Exploring the secrets of the universe for the benefit of all. We investigates the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.</p>
             <p>Every day since Nov. 2, 2000, people have been orbiting our planet inside the International Space Station, bringing together science, technology and human innovation to enable new technologies and research breakthroughs not possible on Earth. The first decade of the International Space Station was the decade of construction. The second decade moved from initial studies to fully using the orbiting lab. We have now entered the decade of results.</p>
+        </div>
+    </div>
+
+    <div class="spaceship">
+        <div class="text">
+            <h1 style="padding-bottom: 20px;">Chandrayaan-3</h1>
+            <p>
+                Chandrayaan-3 is the third mission in the Chandrayaan programme, a series of lunar-exploration missions developed by the Indian Space Research Organisation (ISRO). Launched on 14 July 2023, the mission consists of a lunar lander named Vikram and a lunar rover named Pragyan.
+            </p>
+            <p>
+                Chandrayaan-3 is a follow-on mission to Chandrayaan-2 to demonstrate end-to-end capability in safe landing and roving on the lunar surface. It consists of Lander and Rover configuration. It will be launched by LVM3 from SDSC SHAR, Sriharikota. The propulsion module will carry the lander and rover configuration till 100 km lunar orbit. The propulsion module has Spectro-polarimetry of Habitable Planet Earth (SHAPE) payload to study the spectral and Polari metric measurements of Earth from the lunar orbit.
+            </p>
+        </div>
+        <div class="sketchfab-embed-wrapper"> 
+            <iframe title="" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="740" height="580"  src="https://sketchfab.com/models/a8067a0e394c4961b5e855a8321adff8/embed?autostart=1"> </iframe> 
         </div>
     </div>
 
@@ -234,6 +265,10 @@
         </div>
     </div>
 
+    <div class="solarsystem">
+        
+    </div>
+
     <footer class="foot">
         <div class="footer">
             <div class="column logo-section">
@@ -274,6 +309,39 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        const counters = document.querySelectorAll('.count');
+
+        const startCounting = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const updateCount = () => {
+                const current = +counter.innerText;
+                const increment = target / 200;
+
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    startCounting(counter);
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach((counter) => observer.observe(counter));
+
+
     </script>
 </body>
 </html>

@@ -9,3 +9,9 @@ def News(request):
 
 def Mission(request):
     return render(request,'mission.html')
+
+def Explore(request):
+    return render(request,'explore.html')
+
+def Earth(request):
+    return render(request,'earth.html')

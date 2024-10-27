@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula-Nexus : Explore</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <style>
+        body{
+            background-color: #000;
+        }
+        .champa {
+            width: 100%;
+            height: 650px;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+        .remote {
+            padding-left: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .setupbox {
+            padding-left: 20px;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        .champa .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .chameli {
+            background-color: #17171b;
+            height: 190px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .chameli h1 {
+            font-weight: 200;
+        }
+        .wrath {
+            width: 100%;
+            display: flex;
+            padding-top: 20px;
+            text-align: left;
+            justify-content: space-evenly;
+        }
+        .wrath img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .wrath-sec {
+            padding-left: 40px;
+        }
+        .wrath div {
+            display: flex;
+            justify-content: space-evenly;
+            padding-left: 10px;
+        }
+        .wrath .sec1 {
+            display: flex;
+            flex-direction: column;
+        }
+        .wrath .sec1 p {
+            width: 200px;
+        }
+        .explore-cont {
+            width:100%;
+            height: auto;
+            display: flex;
+            padding: 20px;
+            background-color: black;
+        }
+        
+        .expl-content {
+            width: 100%;
+            padding: 20px;
+            background: black;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+
+        .expl_sec1{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+            background-color: #000;
+        }
+        .sec1_cont{
+            width: 500px;
+        }
+        .sec1_cont h1{
+            font-size: 32px;
+        }
+        .sec1_cont p{
+            font-size: 16px;
+            color: #adafa7;
+        }
+        .button1 {
+        line-height: 1;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10rem;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+        }
+
+        .button1__icon-wrapper {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        color: #000;
+        background-color: #fff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        }
+
+        .button1:hover {
+        background-color: #fff;
+        color: black;
+        }
+
+        .button1:hover .button1__icon-wrapper {
+        color: #fff;
+        background-color: #000;
+        }
+
+        .button1__icon-svg--copy {
+        position: absolute;
+        transform: translate(-150%, 150%);
+        }
+
+        .button1:hover .button1__icon-svg:first-child {
+        transition: transform 0.3s ease-in-out;
+        transform: translate(150%, -150%);
+        }
+
+        .button1:hover .button1__icon-svg--copy {
+        transition: transform 0.3s ease-in-out 0.1s;
+        transform: translate(0);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_box">
+            <div class="nav-sec1">
+                <a href="/mission">Mission</a>
+                <a href="/earth">Earth & Climate</a>
+            </div>
+            <h1 class="logo"><a href="/">Nebula-Nexus</a></h1>
+            <div class="nav-sec1">
+                <a href="/news">News & Events</a>
+                <a href="/explore">Explore Universe</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="champa">
+        <div class="sketchfab-embed-wrapper">
+            <iframe title="Solar System animation" frameborder="0" allowfullscreen
+            mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b7c69a6b655b47c99f871d5ec5aee854/embed?autostart=1&ui_watermark=0"></iframe>
+        </div>
+        <div class="remote">
+            <h1 style="font-size: 70px;">Solar System <br>exploration</h1>
+        </div>
+        <div class="setupbox">
+            <h2 style="font-size: 20px;">join and explore with us</h2>
+        </div>
+    </div>
+    <div class="chameli">
+        <h1 style="font-size: 20px;">Things about solar system</h1>
+        <div class="wrath">
+            <div class="wrath-sec">
+                <img src="../static/img/PIA01341~large.jpg" alt="" width="90px" height="90px">
+                <div class="sec1">
+                    <p style="font-size: 20px;">Many worlds</p>
+                    <p style="color:rgba(185, 187, 188, 0.926)">Our solar system has <br> eight planets.</p>
+                </div>
+            </div>
+            <div>
+                <img src="../static/img/bennu-mosaic.webp" alt="" width="90px" height="90px">
+                <div class="sec1">
+                    <p style="font-size: 20px;">Small Worlds, Too</p>
+                    <p style="color:rgba(185, 187, 188, 0.926)">About 1.4 million asteroids, and about 4,000 comets are in our Solar System</p>
+                </div>
+            </div>
+            <div>
+                <img src="../static/img/150260main_image_feature_592_ys_full.jpg" alt="" width="90px" height="90px">
+                <div class="sec1">
+                    <p style="font-size: 20px;">Lots of Moons</p>
+                    <p style="color:rgba(185, 187, 188, 0.926)">Our Solar System has more than 200 planetary moons.</p>
+                </div>
+            </div>
+            <div>
+                <img src="../static/img/Milky_Way.jpeg" alt="" width="90px" height="90px">
+                <div class="sec1">
+                    <p style="font-size: 20px;">Milky way</p>
+                    <p style="color:rgba(185, 187, 188, 0.926)">Our solar system is in <br> the milky way galaxy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="explore-cont">
+        <div class="expl-content">
+            <h1 style="padding-left: 90px; padding-top: 50px;">Let's Explore</h1>
+            <div class="expl-main">
+                <div class="expl_sec1">
+                    <div class="sketchfab-embed-wrapper"> 
+                        <iframe title="Black Hole" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" 
+                        src="https://sketchfab.com/models/e410da98b1e5445eae2acafaaa53587d/embed?autostart=1"> 
+                        </iframe>
+
+                    </div>
+                    <div class="sec1_cont">
+                        <h1 style="padding-bottom: 40px;">Black Hole</h1>
+                        <p>A black hole is an astronomical object with a gravitational pull so strong that nothing, not even light, can escape it. A black hole’s “surface,” called its event horizon, defines the boundary where the velocity needed to escape exceeds the speed of light, which is the speed limit of the cosmos. Matter and radiation fall in, but they can’t get out.</p>
+                        <p>Two main classes of black holes have been extensively observed. Stellar-mass black holes with three to dozens of times the Sun’s mass are spread throughout our Milky Way galaxy, while supermassive monsters weighing 100,000 to billions of solar masses are found in the centers of most big galaxies, ours included.</p>
+                        <a href="#" class="button1" style="--clr: #7808d0">
+                            <span class="button1__icon-wrapper">
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg"
+                                width="10"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                width="10"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg button1__icon-svg--copy"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+                            </span>
+                            Explore More
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="expl_sec1">
+                    <div class="sec1_cont">
+                        <h1 style="padding-bottom: 40px;">Milky Way Galaxy</h1>
+                        <p>Our Sun (a star) and all the planets around it are part of a galaxy known as the Milky Way Galaxy. A galaxy is a large group of stars, gas, and dust bound together by gravity. They come in a variety of shapes and sizes. The Milky Way is a large barred spiral galaxy. All the stars we see in the night sky are in our own Milky Way Galaxy. Our galaxy is called the Milky Way because it appears as a milky band of light in the sky when you see it in a really dark area.</p>
+                        <a href="https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html" class="button1" style="--clr: #7808d0">
+                            <span class="button1__icon-wrapper">
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg"
+                                width="10"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                width="10"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg button1__icon-svg--copy"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+                            </span>
+                            Explore More
+                        </a>
+
+                    </div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Need some space?" frameborder="0" allowfullscreen
+                            mozallowfullscreen="true" webkitallowfullscreen="true"
+                            allow="autoplay; fullscreen; xr-spatial-tracking"
+                            xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                            width="640" height="480"
+                            src="https://sketchfab.com/models/d6521362b37b48e3a82bce4911409303/embed?autoplay=1&autostart=true">
+                    </iframe>
+
+                    </div>
+                </div>
+
+                <div class="expl_sec1">
+                    <div class="sketchfab-embed-wrapper"> 
+                        <div class="sketchfab-embed-wrapper"> 
+                            <iframe title="Stars and nebulae" frameborder="0" allowfullscreen 
+                            mozallowfullscreen="true" webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+                            width="640" height="480" 
+                            src="https://sketchfab.com/models/114bb4cc9dda41ffbbb9724e3598927c/embed?autostart=1"> 
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="sec1_cont">
+                        <h1 style="padding-bottom: 40px;">Stars and Nebulae</h1>
+                        <p>Artist’s impression of a star forming region, a dense interstellar gas and dust cloud where stars are formed in large numbers in intervals of time of the order of a million years. These clouds consist in a mixture of dust, hydrogen, helium and heavy elements previously forged in the interior of previous stars and ejected at the end of their lives in the form of dense winds and supernova explosions. New stars are formed in the cloud from the collapse of dense knots (an example is the star-forming region nebula NGC 346; see figure below). The newly formed stars are very active and characterized by strong variability: bright flares, massive accretion episodes, ejection of plasma in the form of collimated jets, coronal mass ejections, and winds.</p>
+                        <a href="https://hubblesite.org/science/stars-and-nebulas" class="button1" style="--clr: #7808d0">
+                            <span class="button1__icon-wrapper">
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg"
+                                width="10"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+
+                                <svg
+                                viewBox="0 0 14 15"
+                                fill="none"
+                                width="10"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="button1__icon-svg button1__icon-svg--copy"
+                                >
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                ></path>
+                                </svg>
+                            </span>
+                            Explore More
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="foot">
+        <div class="footer">
+            <div class="column logo-section">
+              <h2>Newbula Nexus</h2>
+              <p>Providing real-time space data from NASA, Space X and ISRO to inform and inspire the world through discovery and innovation.</p>
+            </div>
+          
+            <div class="column">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">Live Missions</a></li>
+              </ul>
+            </div>
+          
+            <div class="column">
+              <h3>Topics</h3>
+              <ul>
+                <li><a href="#">Humans in Space</a></li>
+                <li><a href="#">Earth & Climate</a></li>
+                <li><a href="#">The Solar System</a></li>
+                <li><a href="#">Science & Technology</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="copywrite">
+            <p>Developed By Why Code &copy; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        window.addEventListener('scroll', () => {
+            const indicatorBar = document.querySelector('.indicator-bar');
+            const content = document.querySelector('.expl-content');
+            const contentTop = content.offsetTop;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop >= contentTop) {
+                const docHeight = content.scrollHeight - window.innerHeight;
+                const scrolledPixels = scrollTop - contentTop; 
+                const heightInPixels = (scrolledPixels / docHeight) * window.innerHeight;
+                indicatorBar.style.height = heightInPixels + 'px';
+            } else {
+                indicatorBar.style.height = '0px';
+            }
+        });
+    </script>
+</body>
+</html>
