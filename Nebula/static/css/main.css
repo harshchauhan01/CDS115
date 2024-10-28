@@ -19,7 +19,7 @@ body {
     font-weight: 300;
     overflow-x: hidden;
     position: relative;
-    background-color: #121212 !important;
+    background-color: black !important;
     color: #fff !important;
     font-family: "Public Sans Web",sans-serif !important;
     letter-spacing: 2px;
@@ -468,6 +468,46 @@ h1,h2{
     margin-top: 20px;
 }
 
+
+.mission-banner{
+    margin-top: 0;
+    padding: 0px 0 0px 0;
+    background-image: url("/static/img/spacepumpkinheader1600px.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.mission-banner .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 250px 50px;
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+}
+
+.mission-banner .cont{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.mission-banner .cont h1{
+    font-size:55px;
+}
+.mission-banner .cont p{
+    font-size: 16px;
+}
+.mission-banner button{
+    margin-top: 20px;
+}
+
 .news-cont{
     display: flex;
     width: 100%;
@@ -492,8 +532,18 @@ h1,h2{
 }
 
 .news_sec{
-    background-color: white;
-    color: #000;
+    background-color: black;
+    color: rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    padding: 90px 80px;
+    justify-content: center;
+    width: 100%;
+}
+.news_sec h1{
+    font-size: 40px;
+    text-align: center;
+    font-family: "Ceric";
 }
 
 .news_card_container{
@@ -501,17 +551,21 @@ h1,h2{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    padding: 70px 20px;
+    padding: 40px 0px;
     overflow-x: scroll;
+    overflow-x: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
 }
 
 .news-card {
-    width: 350px;
+    width: 320px;
     height: 500px;
     background: rgb(0, 0, 0);
     padding: .4em;
     border-radius: 6px;
-    overflow-y: scroll;
+    margin-left: 40px;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
 }
   
 .news-card .card-image {
@@ -569,6 +623,14 @@ h1,h2{
     height: 350px;
     background-color: #000;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter-container .count-cont{
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -745,3 +807,33 @@ h1,h2{
     width: 500px;
 }
 
+.todays_image{
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 100px;
+}
+
+.todays_image .today_cont{
+    width: 100%;
+    display: flex;
+
+}
+
+.earth_sec2{
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    padding: 60px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.earth_sec2 .sec2_cont{
+    width: 550px;
+    font-size: 15px;
+    height: 400px;
+}

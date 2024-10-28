@@ -32,53 +32,71 @@
 
     <div class="news_sec">
         <div>
-            <h1>Latest News</h1>
+            <h1><a>Latest News</a></h1>
         </div>
         <div class="news_card_container">
-            <div class="news-card">
-                <div class="card-image">
-                    <img src="../static/img/nhq202410250003.webp" alt="" width="400">
+            {% for article in articles %}
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="{{ article.image_url }}" alt="{{ article.title }}" width="400" height="246">
+                    </div>
+                    <div class="category">{{ article.title }}</div>
+                    <div class="heading">{{ article.description }}
+                        <div class="author">{{ article.published_at }}</div>
+                    </div>
                 </div>
-                <div class="category"> Illustration </div>
-                <div class="heading">NASA’s SpaceX Crew-8 mission successfully splashed down at 3:29 a.m. EDT Friday, off Pensacola, Florida, concluding a nearly eight-month science mission and the agency’s eighth commercial crew rotation mission to the International Space Station.  
-                    <div class="author">2 days ago</div>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <div class="card-image">
-                    <img src="../static/img/AA1sXO3W.jfif" alt="" width="400">
-                </div>
-                <div class="category"> Illustration </div>
-                <div class="heading">Everyone is looking at Elon Musk’: ISRO chief S Somanath ‘inspired’ by work of SpaceX CEO, says ‘trying to beat him…'
-                    <div class="author">1 days ago</div>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <div class="card-image">
-                    <img src="../static/img/AA1sYwdh.jfif" alt="" width="400">
-                </div>
-                <div class="category"> Illustration </div>
-                <div class="heading">ISRO to launch electric propelled satellite in Dec: Somanath.
-                 Somanath said the integration of the radar antenna reflector with the satellite will take about two months.
-                "We will schedule it for launch in February," the ISRO chairman said. PTI SKU ZMN
-                    <div class="author">1 days ago</div>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <div class="card-image">
-                    <img src="../static/img/chile-signs-accords.webp" alt="" width="400">
-                </div>
-                <div class="category"> Illustration </div>
-                <div class="heading"> Chile signed the Artemis Accords Friday during a ceremony hosted by NASA Administrator Bill Nelson at the agency’s headquarters in Washington, becoming the 47th nation and the seventh South American country to commit to the responsible exploration of space for all humanity.
-                    <div class="author">1 days ago</div>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
+        
     </div>
+
+    <div class="todays_image">
+        {% if apod.image_url %}
+            <h1 style="padding-bottom: 50px;">Image Of The Day</h1>
+            <div class="today_cont" style="display: flex;align-items: center;justify-content: space-evenly;">
+                <div class="today_text">
+                    <h2 style="padding-bottom: 40px;">{{ apod.apod_text }}</h2>
+                    <p style="width: 500px;">{{ apod.explanation }}</p>
+                </div>
+                <img src="{{ apod.image_url }}" alt="Fetched Image" width="540" height="480">
+            </div>
+        {% else %}
+            <p>{{ error }}</p>
+        {% endif %}
+        
+    </div>
+
+
+    <footer class="foot">
+        <div class="footer">
+            <div class="column logo-section">
+              <h2>Newbula Nexus</h2>
+              <p>Providing real-time space data from NASA, Space X and ISRO to inform and inspire the world through discovery and innovation.</p>
+            </div>
+          
+            <div class="column">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News & Events</a></li>
+                <li><a href="/mission">Live Missions</a></li>
+              </ul>
+            </div>
+          
+            <div class="column">
+              <h3>Topics</h3>
+              <ul>
+                <li><a href="/explore">Humans in Space</a></li>
+                <li><a href="/earth">Earth & Climate</a></li>
+                <li><a href="/explore">The Solar System</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="copywrite">
+            <p>Developed By Why Code &copy; All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script>
         window.addEventListener('scroll', function () {

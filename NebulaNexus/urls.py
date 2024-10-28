@@ -28,6 +28,7 @@ urlpatterns = [
     path('mission/',Mission,name='Mission'),
     path('explore/',Explore,name='Explore'),
     path('earth/',Earth,name='Earth'),
+    
 ]
 
 
